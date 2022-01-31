@@ -23,7 +23,7 @@ jobs:
            - name: bi-a
              uses: actions/checkout@v2
              with:
-               repository: bi-misc/bi-a
+               repository: dsjena/bi-a
                token: ${{ secrets.SUPER_SECRET }}
                path: bi-a
            - name: Setup
