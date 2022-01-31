@@ -20,24 +20,24 @@ jobs:
                pwd
                echo "main is done..."
 
-           - name: 
+           - name: bi-m
              uses: actions/checkout@v2
              with:
-               repository: bi-misc/
+               repository: dsjena/bi-m
                token: ${{ secrets.SUPER_SECRET }}
-               path: 
+               path: bi-m
            - name: Setup
              uses: actions/setup-python@v2
              with:
                python-version: '3.8'
            - name: Install
              run: |
-               cd .//
+               cd ./bi-m/
                python -m pip install --upgrade pip
                pip install -r requirements.txt
            - name: Compute M
              run: |
-               cd .//
+               cd ./bi-m/
                dtt=`TZ=IST-5:30 date`
                echo ${GITHUB_WORKSPACE}
                echo "${dtt}" 
